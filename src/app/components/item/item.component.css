@@ -1,0 +1,64 @@
+li {
+  padding-top: 30px;
+  padding-bottom: 17px;
+
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--purple-transparent);
+
+  .edit, .delete {
+    display: none;
+  }
+}
+
+li:hover {
+  .edit, .delete {
+    display: block;
+  }
+}
+
+:host:nth-last-of-type(1) {
+  li {
+    border-bottom: none;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+}
+
+.edit {
+  background-image: url("/icons/edit.svg");
+}
+
+.delete {
+  background-image: url("/icons/trash.svg");
+}
+
+.edit:active:hover {
+  background-image: url("/icons/edit-active.svg");
+}
+
+.delete:active:hover {
+  background-image: url("/icons/trash-active.svg");
+}
+
+
+.action-button {
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  border: none;
+  width: 18px;
+  height: 18px;
+}

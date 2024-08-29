@@ -1,0 +1,7 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <input appFocus formControlName="content" placeholder="Input your note..." type="text" value="{{content}}">
+  <section>
+    <button (click)="modalService.close()" class="action-button cancel" type="reset">cancel</button>
+    <button class="action-button submit" type="submit">apply</button>
+  </section>
+</form>

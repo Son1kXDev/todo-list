@@ -1,0 +1,41 @@
+input {
+  width: 440px;
+  height: 38px;
+  margin-top: 25px;
+  margin-inline: 30px;
+  padding-inline: 16px;
+  background: transparent;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+}
+
+section {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 18px;
+  padding-inline: 30px;
+
+  .action-button {
+    text-transform: uppercase;
+    padding-block: 10px;
+    padding-inline: 22px;
+    text-align: center;
+    border: 1px solid var(--purple);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cancel {
+    background: transparent;
+    color: var(--purple);
+  }
+
+  .submit {
+    background: var(--purple);
+    color: var(--white);
+  }
+}

@@ -1,0 +1,24 @@
+<div class="content">
+  <h1>TODO LIST</h1>
+  <section class="todo">
+    <div [ngStyle]="
+    {
+      'display': todoService.todos.todos.length > 0 ? 'none' : 'flex',
+    }" class="empty">
+      <img alt="" src="/icons/detective.svg"/>
+      <p>Empty...</p>
+    </div>
+    <ul>
+      <app-item *ngFor="let todo of todoService.todos?.todos" [length]="todoService.todos.todos.length || 0"
+                [todo]=todo></app-item>
+    </ul>
+  </section>
+  <button (click)="addTodo()" class="add"></button>
+</div>
+<app-modal *ngIf="modalService.isVisible$ | async">
+  <app-create-todo [length]="todoService.todos.todos.length || 0"></app-create-todo>
+</app-modal>
+
+
+
+

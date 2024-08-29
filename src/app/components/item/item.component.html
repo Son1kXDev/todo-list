@@ -1,0 +1,9 @@
+<li>
+  <section class="left">
+    <app-checkbox [checked]="todo.completed" [id]="todo.id" [title]="todo.todo"></app-checkbox>
+  </section>
+  <section class="right">
+    <button (click)="editThis()" class="action-button edit"></button>
+    <button (click)="deleteThis()" class="action-button delete"></button>
+  </section>
+</li>

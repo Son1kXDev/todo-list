@@ -1,0 +1,8 @@
+<input (change)="checked=!checked" [checked]="checked" class="custom-checkbox" id="{{id}}" name="title"
+       type="checkbox"/>
+<label [ngClass]="{
+'checked': checked,
+'unchecked':!checked
+}" for="{{id}}">
+  {{ title }}
+</label>
